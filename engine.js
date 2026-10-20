@@ -123,7 +123,7 @@
     scroll = 0; drag = null; ptrs.clear(); Jig.edgesOnly = false; Jig.peek = false;
     layout();
     if (G._pendingLoose) { G._pendingLoose.forEach(([id, u, v, g]) => { const p = G.pieces[id]; p.x = L.bx + u * L.pw; p.y = L.by + v * L.ph; p.group = g; G.loose.push(id); }); delete G._pendingLoose; }
-    if (!ro) { ro = new ResizeObserver(() => { if (G) { const before = G.loose.map(id => { const p = G.pieces[id]; return [id, (p.x - L.bx) / L.pw, (p.y - L.by) / L.ph]; }); layout(); before.forEach(([id, u, v]) => { const p = G.pieces[id]; p.x = L.bx + u * L.pw; p.y = L.by + v * L.ph; }); } }); ro.observe(cv.parentElement); }
+    if (!ro) { ro = new ResizeObserver(() => Jig.relayout()); ro.observe(cv.parentElement); }
     if (!cv._wired) wire();
     if (!saved) save();
     changed();
@@ -132,6 +132,17 @@
   Jig.progress = function () { if (!G) return null; const placed = G.pieces.filter(p => p.placed).length; return { placed, total: G.pieces.length }; };
   Jig.redraw = function () { dirty = true; };
   Jig._debug = function () { return { G, L, scroll, view }; };
+
+  // Called when the screen size changes (rotate, resize): re-fit everything and keep loose pieces at the same spot on the picture.
+  Jig.relayout = function () {
+    if (!G) return;
+    const before = G.loose.map(id => { const p = G.pieces[id]; return [id, (p.x - L.bx) / L.pw, (p.y - L.by) / L.ph]; });
+    layout();
+    before.forEach(([id, u, v]) => { const p = G.pieces[id]; p.x = L.bx + u * L.pw; p.y = L.by + v * L.ph; });
+    // pieces that now sit outside (or under the tray) are pulled back onto the visible table
+    G.loose.forEach(id => { const p = G.pieces[id]; p.x = Math.max(4, Math.min(L.w - L.pw - 4, p.x)); p.y = Math.max(4, Math.min(L.trayTop - L.ph - 4, p.y)); });
+    changed();
+  };
 
   function layout() {
     const dpr = Math.min(window.devicePixelRatio || 1, 2.5), box = cv.parentElement.getBoundingClientRect();
@@ -249,8 +260,10 @@
   function slotCenter(i) { const { x0, y0 } = trayGeom(); const col = Math.floor(i / L.trows), row = i % L.trows; return [x0 + col * L.slot + L.slot / 2 - scroll, y0 + row * L.slot + L.slot / 2]; }
   function slotAt(x, y) { const { x0, y0 } = trayGeom(); const col = Math.floor((x - x0 + scroll) / L.slot), row = Math.floor((y - y0) / L.slot); if (col < 0 || row < 0 || row >= L.trows) return -1; return col * L.trows + row; }
 
-  function draw() {
-    requestAnimationFrame(draw);
+  function draw() { requestAnimationFrame(draw); drawFrame(); }
+  // test hook: average milliseconds to draw one full frame
+  Jig._timeDraw = function (n) { const t = performance.now(); for (let i = 0; i < n; i++) { dirty = true; drawFrame(); } return (performance.now() - t) / n; };
+  function drawFrame() {
     if (!G || !dirty) return; dirty = false;
     const { w, h, dpr } = L;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
