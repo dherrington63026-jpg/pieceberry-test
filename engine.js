@@ -131,7 +131,7 @@
   Jig.stop = function () { if (G) save(); G = null; };
   Jig.progress = function () { if (!G) return null; const placed = G.pieces.filter(p => p.placed).length; return { placed, total: G.pieces.length }; };
   Jig.redraw = function () { dirty = true; };
-  Jig._debug = function () { return { G, L, scroll, view }; };
+  if (!window.STORE_LIVE) Jig._debug = function () { return { G, L, scroll, view }; };
 
   // Called when the screen size changes (rotate, resize): re-fit everything and keep loose pieces at the same spot on the picture.
   Jig.relayout = function () {
@@ -262,7 +262,7 @@
 
   function draw() { requestAnimationFrame(draw); drawFrame(); }
   // test hook: average milliseconds to draw one full frame
-  Jig._timeDraw = function (n) { const t = performance.now(); for (let i = 0; i < n; i++) { dirty = true; drawFrame(); } return (performance.now() - t) / n; };
+  if (!window.STORE_LIVE) Jig._timeDraw = function (n) { const t = performance.now(); for (let i = 0; i < n; i++) { dirty = true; drawFrame(); } return (performance.now() - t) / n; };
   function drawFrame() {
     if (!G || !dirty) return; dirty = false;
     const { w, h, dpr } = L;

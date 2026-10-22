@@ -270,8 +270,10 @@
 
 <canvas id="confetti" class="hidden"></canvas>
 
-<script src="pics.js?v=7"></script>
-<script src="music.js?v=7"></script>
+<script src="store-bridge.js?v=13"></script>
+<script>window.STORE_LIVE = false; /* the store build turns this on: no test dates, no free test unlock, no debug hooks */</script>
+<script src="pics.js?v=13"></script>
+<script src="music.js?v=13"></script>
 <script src="engine.js?v=9"></script>
 <script>
 (function () {
@@ -290,7 +292,7 @@
 
   // ---------- dates (local time; window.__jgToday = 'YYYY-MM-DD' overrides it for testing) ----------
   const dstr = (d) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-  const today = () => window.__jgToday || dstr(new Date());
+  const today = () => (!window.STORE_LIVE && window.__jgToday) || dstr(new Date());
   const addDays = (s, k) => { const d = new Date(s + 'T12:00:00'); d.setDate(d.getDate() + k); return dstr(d); };
   const dayNum = (s) => Math.round((new Date(s + 'T12:00:00') - new Date('2026-01-01T12:00:00')) / 864e5);
   const niceDate = (s) => new Date(s + 'T12:00:00').toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
@@ -365,6 +367,7 @@
   const addItems = (cat, list, f) => list.forEach((r) => { const k = f ? f(r) : r; ITEMS[cat + '_' + k[0]] = { id: cat + '_' + k[0], cat, key: k[0], name: k[1], usd: k[2], blurb: k[3] }; });
   addItems('pack', PACKS); addItems('bg', BGS); addItems('style', STYLES); addItems('snd', SNDS);
   MUSICS.forEach((k) => { const m = window.MMusic && MMusic.PACKS[k]; if (m) ITEMS['music_' + k] = { id: 'music_' + k, cat: 'music', key: k, name: m.name, usd: m.price || 0, blurb: m.blurb }; });
+  Jig.catalog = function () { return { items: ITEMS, club: CLUB }; };
   const CLUB = { club_monthly: ['Club monthly', 2.99], club_yearly: ['Club yearly', 19.99] };
   const CATS = { pack: 'Picture packs', bg: 'Table backgrounds', style: 'Piece styles', snd: 'Click sounds', music: 'Music' };
   const DEFAULT = { bg: 'plum', style: 'classic', snd: 'wood', music: 'meadow' };
@@ -404,7 +407,7 @@
         .catch(() => { SHOP.busy = false; toast('Purchase not finished. You were not charged.'); });
       return;
     }
-    if (NATIVE) { toast('The store is not available right now. Please try again later.'); return; }
+    if (NATIVE || window.STORE_LIVE) { toast('The store is not available right now. Please try again later.'); return; }
     info('<h3>Test version</h3><p class="bl">This web test version cannot take money. Unlock <b>' + esc(nm) + '</b> for free so you can try it?</p><p class="note">In the app, this button opens the App Store or Google Play.</p>' +
       '<button class="btn pri" data-act="testbuy" data-v="' + id + '">Unlock for testing</button>', true);
   }
@@ -419,7 +422,7 @@
       window.PBStore.restore().then((ids) => { setOwned(ids, true); applyLook(); renderAll(); restored(); }).catch(() => toast('Could not reach the store. Check your internet and try again.'));
       return;
     }
-    if (NATIVE) { toast('Could not reach the store. Check your internet and try again.'); return; }
+    if (NATIVE || window.STORE_LIVE) { toast('Could not reach the store. Check your internet and try again.'); return; }
     restored();
   }
   function restored() {
@@ -483,7 +486,7 @@
     const club = document.createElement('div'); club.className = 'club';
     club.innerHTML = hasClub()
       ? '<h3>Pieceberry Club</h3><p class="have">✓ You are in the Club. Every picture pack, background, piece style, sound and song is yours, and new ones too.</p><p>To cancel or change your plan, open your App Store or Google Play subscriptions.</p>'
-      : '<h3>Pieceberry Club</h3><p>Everything unlocked: every picture pack, table background, piece style, click sound and song. Every new pack too, while you are a member. Still no ads, ever.</p>' +
+      : '<h3>Pieceberry Club</h3><p>Everything unlocked: every picture pack, table background, piece style, click sound and song. New packs we add later too. Still no ads, ever.</p>' +
         '<div class="plans"><button class="plan" data-v="club_monthly">' + esc(priceOf('club_monthly')) + '<small>per month</small></button><button class="plan best" data-v="club_yearly">' + esc(priceOf('club_yearly')) + '<small>per year · best value</small></button></div>' +
         '<p style="margin:10px 0 0;font-size:12.5px;font-weight:700">Renews until you cancel it in your store account. Cancel any time.</p>';
     club.querySelectorAll('.plan').forEach((b) => { b.onclick = () => buy(b.dataset.v); });
@@ -491,7 +494,7 @@
     Object.keys(CATS).forEach((cat) => {
       const ids = Object.keys(ITEMS).filter((k) => ITEMS[k].cat === cat); if (!ids.length) return;
       const sec = document.createElement('div'); sec.className = 'shopsec';
-      sec.innerHTML = '<h3>' + CATS[cat] + '</h3>' + (cat === 'pack' ? '<div class="hint">More pictures arrive every month.</div>' : '');
+      sec.innerHTML = '<h3>' + CATS[cat] + '</h3>' + (cat === 'pack' ? '<div class="hint">More pictures are added over time.</div>' : '');
       const g = document.createElement('div'); g.className = 'sgrid'; ids.forEach((id) => g.appendChild(card(id))); sec.appendChild(g); box.appendChild(sec);
     });
     const r = document.createElement('button'); r.className = 'restore'; r.textContent = 'Restore purchases'; r.onclick = restorePurchases; box.appendChild(r);
@@ -515,7 +518,7 @@
       acts += '<button class="btn pri" data-act="buy">Buy · ' + esc(priceOf(id)) + '</button>';
       acts += '<button class="btn sec" data-act="club">Get everything with the Club</button>';
     }
-    info('<div class="isheet"><div class="pv">' + pv + '</div><h3>' + esc(it.name) + '</h3><div class="bl">' + esc(it.blurb || '') + (n ? ' ' + n + ' pictures to start, and more arrive every month.' : '') + '</div>' + acts + '</div>', true);
+    info('<div class="isheet"><div class="pv">' + pv + '</div><h3>' + esc(it.name) + '</h3><div class="bl">' + esc(it.blurb || '') + (n ? ' ' + n + ' pictures to start, and more are added over time.' : '') + '</div>' + acts + '</div>', true);
     $('infoBody').querySelectorAll('[data-act]').forEach((b) => b.onclick = () => {
       const a = b.dataset.act;
       if (a === 'buy') buy(id);
@@ -733,7 +736,9 @@
   }
   $('infoClose').onclick = () => $('infoSheet').classList.add('hidden');
   $('infoSheet').onclick = (e) => { if (e.target.id === 'infoSheet') $('infoSheet').classList.add('hidden'); };
-  $('credBtn').onclick = () => info('<h3>Picture credits</h3><div class="credits">' + PICS.map((p) => '<div><b>' + esc(cleanTitle(p.title)) + '</b><br>' + esc(p.artist) + (p.date ? ', ' + esc(p.date) : '') + '<br>' + esc(p.source) + (p.url ? ' · <a href="' + p.url + '" target="_blank" rel="noopener">source</a>' : '') + '</div>').join('') + '</div>');
+  $('credBtn').onclick = () => info('<h3>Credits</h3><div class="credits"><div><b>About the pictures</b><br>Every picture was created with AI image tools run on a private computer, with no outside service: Z-Image-Turbo (Apache-2.0 licence), enlarged with Real-ESRGAN (BSD-3 licence). They are not photographs of real places or people.</div>' +
+    '<div><b>Music and sounds</b><br>Piano: Gymnopédies 1 and 3 (Erik Satie, played by Teknopazzo, CC0), Gnossienne 2 and 3 (Erik Satie, La Pianista, public domain), Clair de Lune (Claude Debussy, 1905 recording, public domain). Ocean waves: Jarrod Stanley (CC0). Rain: cori (public domain). Fireplace: ezwa (public domain). All via Wikimedia Commons. The other music and the click sounds are made live inside the app.</div>' +
+    '<div><b>Pictures</b></div>' + PICS.map((p) => '<div><b>' + esc(cleanTitle(p.title)) + '</b><br>' + esc(p.artist) + (p.date ? ', ' + esc(p.date) : '') + '<br>' + esc(p.source) + (p.url ? ' · <a href="' + p.url + '" target="_blank" rel="noopener">source</a>' : '') + '</div>').join('') + '</div>');
   $('gear').onclick = () => {
     info('<h3>Settings</h3><div class="set">Big pieces in the tray<button class="sw' + (Jig.big ? ' on' : '') + '" data-k="big"></button></div>' +
       '<div class="set">Sound<button class="sw' + (Jig.sound ? ' on' : '') + '" data-k="sound"></button></div>' +
