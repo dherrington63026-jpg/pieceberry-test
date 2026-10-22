@@ -3,7 +3,7 @@ window.PICS = [
  {
   "file": "pics/g001.jpg",
   "thumb": "pics/t001.jpg",
-  "title": "Cozy cabin porch",
+  "title": "Cabin Porch",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -14,7 +14,7 @@ window.PICS = [
  {
   "file": "pics/g002.jpg",
   "thumb": "pics/t002.jpg",
-  "title": "Cluttered artist studio",
+  "title": "Artist Studio",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -25,7 +25,7 @@ window.PICS = [
  {
   "file": "pics/g003.jpg",
   "thumb": "pics/t003.jpg",
-  "title": "Cozy cottage kitchen",
+  "title": "Cottage Kitchen",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -36,7 +36,7 @@ window.PICS = [
  {
   "file": "pics/g004.jpg",
   "thumb": "pics/t004.jpg",
-  "title": "Fox family in a mossy forest",
+  "title": "Foxes in the Moss",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -47,7 +47,29 @@ window.PICS = [
  {
   "file": "pics/g005.jpg",
   "thumb": "pics/t005.jpg",
-  "title": "Greenhouse packed with colourful flowers, succulents",
+  "title": "Wildflower Meadow",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/002",
+  "seed": 560488995
+ },
+ {
+  "file": "pics/g006.jpg",
+  "thumb": "pics/t006.jpg",
+  "title": "The Pantry Shelf",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "water4/001",
+  "seed": 796432350
+ },
+ {
+  "file": "pics/g007.jpg",
+  "thumb": "pics/t007.jpg",
+  "title": "The Greenhouse",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -56,9 +78,9 @@ window.PICS = [
   "seed": 1987003834
  },
  {
-  "file": "pics/g006.jpg",
-  "thumb": "pics/t006.jpg",
-  "title": "Greenhouse packed with colourful flowers, succulents",
+  "file": "pics/g008.jpg",
+  "thumb": "pics/t008.jpg",
+  "title": "The Greenhouse",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -67,9 +89,9 @@ window.PICS = [
   "seed": 2062646828
  },
  {
-  "file": "pics/g007.jpg",
-  "thumb": "pics/t007.jpg",
-  "title": "Greenhouse packed with colourful flowers, succulents",
+  "file": "pics/g009.jpg",
+  "thumb": "pics/t009.jpg",
+  "title": "The Greenhouse",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -78,9 +100,9 @@ window.PICS = [
   "seed": 721576079
  },
  {
-  "file": "pics/g008.jpg",
-  "thumb": "pics/t008.jpg",
-  "title": "Autumn village street",
+  "file": "pics/g010.jpg",
+  "thumb": "pics/t010.jpg",
+  "title": "Autumn Village Lane",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -89,9 +111,31 @@ window.PICS = [
   "seed": 1558975056
  },
  {
-  "file": "pics/g009.jpg",
-  "thumb": "pics/t009.jpg",
-  "title": "Colourful fishing harbor",
+  "file": "pics/g011.jpg",
+  "thumb": "pics/t011.jpg",
+  "title": "Tide Pool",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "photo3/003",
+  "seed": 946860604
+ },
+ {
+  "file": "pics/g012.jpg",
+  "thumb": "pics/t012.jpg",
+  "title": "The Conservatory",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "water4/002",
+  "seed": 1732069991
+ },
+ {
+  "file": "pics/g013.jpg",
+  "thumb": "pics/t013.jpg",
+  "title": "Fishing Harbour",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -100,9 +144,9 @@ window.PICS = [
   "seed": 195480068
  },
  {
-  "file": "pics/g010.jpg",
-  "thumb": "pics/t010.jpg",
-  "title": "Seaside village",
+  "file": "pics/g014.jpg",
+  "thumb": "pics/t014.jpg",
+  "title": "Seaside Village",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -111,9 +155,9 @@ window.PICS = [
   "seed": 621965774
  },
  {
-  "file": "pics/g011.jpg",
-  "thumb": "pics/t011.jpg",
-  "title": "Stacks of colourful lobster pots",
+  "file": "pics/g015.jpg",
+  "thumb": "pics/t015.jpg",
+  "title": "Lobster Pots",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -122,9 +166,9 @@ window.PICS = [
   "seed": 1228142371
  },
  {
-  "file": "pics/g012.jpg",
-  "thumb": "pics/t012.jpg",
-  "title": "Mosaic of colourful seashells and starfish",
+  "file": "pics/g016.jpg",
+  "thumb": "pics/t016.jpg",
+  "title": "Shell Mosaic",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -133,9 +177,31 @@ window.PICS = [
   "seed": 1331784636
  },
  {
-  "file": "pics/g013.jpg",
-  "thumb": "pics/t013.jpg",
-  "title": "Farmhouse table",
+  "file": "pics/g017.jpg",
+  "thumb": "pics/t017.jpg",
+  "title": "Butterfly Bush",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "photo3/004",
+  "seed": 1098580455
+ },
+ {
+  "file": "pics/g018.jpg",
+  "thumb": "pics/t018.jpg",
+  "title": "Seaside Promenade",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "water4/003",
+  "seed": 2080880461
+ },
+ {
+  "file": "pics/g019.jpg",
+  "thumb": "pics/t019.jpg",
+  "title": "Farmhouse Table",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -144,9 +210,9 @@ window.PICS = [
   "seed": 1084901894
  },
  {
-  "file": "pics/g014.jpg",
-  "thumb": "pics/t014.jpg",
-  "title": "Candy shop",
+  "file": "pics/g020.jpg",
+  "thumb": "pics/t020.jpg",
+  "title": "Candy Shop",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -155,9 +221,9 @@ window.PICS = [
   "seed": 1512300648
  },
  {
-  "file": "pics/g015.jpg",
-  "thumb": "pics/t015.jpg",
-  "title": "Puppies playing in an autumn garden",
+  "file": "pics/g021.jpg",
+  "thumb": "pics/t021.jpg",
+  "title": "Puppies in the Leaves",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -166,9 +232,9 @@ window.PICS = [
   "seed": 43736631
  },
  {
-  "file": "pics/g016.jpg",
-  "thumb": "pics/t016.jpg",
-  "title": "English cottage garden",
+  "file": "pics/g022.jpg",
+  "thumb": "pics/t022.jpg",
+  "title": "English Cottage Garden",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -177,9 +243,31 @@ window.PICS = [
   "seed": 227418004
  },
  {
-  "file": "pics/g017.jpg",
-  "thumb": "pics/t017.jpg",
-  "title": "Harvest farm stand",
+  "file": "pics/g023.jpg",
+  "thumb": "pics/t023.jpg",
+  "title": "Italian Deli",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "photo3/005",
+  "seed": 194367612
+ },
+ {
+  "file": "pics/g024.jpg",
+  "thumb": "pics/t024.jpg",
+  "title": "Butterfly Bush",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "water4/004",
+  "seed": 673625777
+ },
+ {
+  "file": "pics/g025.jpg",
+  "thumb": "pics/t025.jpg",
+  "title": "Harvest Stand",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -188,9 +276,9 @@ window.PICS = [
   "seed": 147340793
  },
  {
-  "file": "pics/g018.jpg",
-  "thumb": "pics/t018.jpg",
-  "title": "Spring orchard in blossom",
+  "file": "pics/g026.jpg",
+  "thumb": "pics/t026.jpg",
+  "title": "Spring Orchard",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -199,9 +287,9 @@ window.PICS = [
   "seed": 1420309303
  },
  {
-  "file": "pics/g019.jpg",
-  "thumb": "pics/t019.jpg",
-  "title": "Snowy winter village",
+  "file": "pics/g027.jpg",
+  "thumb": "pics/t027.jpg",
+  "title": "Snowy Village",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -210,9 +298,9 @@ window.PICS = [
   "seed": 679413523
  },
  {
-  "file": "pics/g020.jpg",
-  "thumb": "pics/t020.jpg",
-  "title": "Fox family in a mossy forest",
+  "file": "pics/g028.jpg",
+  "thumb": "pics/t028.jpg",
+  "title": "Foxes in the Moss",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -221,9 +309,31 @@ window.PICS = [
   "seed": 904623980
  },
  {
-  "file": "pics/g021.jpg",
-  "thumb": "pics/t021.jpg",
-  "title": "Walled hilltop village of honey-coloured stone",
+  "file": "pics/g029.jpg",
+  "thumb": "pics/t029.jpg",
+  "title": "Red Maple Lane",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "photo3/006",
+  "seed": 1410903750
+ },
+ {
+  "file": "pics/g030.jpg",
+  "thumb": "pics/t030.jpg",
+  "title": "Honey and Honeycomb",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "water4/005",
+  "seed": 771740387
+ },
+ {
+  "file": "pics/g031.jpg",
+  "thumb": "pics/t031.jpg",
+  "title": "Hilltop Village",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -232,9 +342,9 @@ window.PICS = [
   "seed": 1132800612
  },
  {
-  "file": "pics/g022.jpg",
-  "thumb": "pics/t022.jpg",
-  "title": "Old stone bridge",
+  "file": "pics/g032.jpg",
+  "thumb": "pics/t032.jpg",
+  "title": "Old Stone Bridge",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -243,9 +353,9 @@ window.PICS = [
   "seed": 236571187
  },
  {
-  "file": "pics/g023.jpg",
-  "thumb": "pics/t023.jpg",
-  "title": "Old stone bridge",
+  "file": "pics/g033.jpg",
+  "thumb": "pics/t033.jpg",
+  "title": "Old Stone Bridge",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -254,9 +364,9 @@ window.PICS = [
   "seed": 2096869129
  },
  {
-  "file": "pics/g024.jpg",
-  "thumb": "pics/t024.jpg",
-  "title": "Spring orchard in blossom",
+  "file": "pics/g034.jpg",
+  "thumb": "pics/t034.jpg",
+  "title": "Spring Orchard",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -265,9 +375,31 @@ window.PICS = [
   "seed": 1576701990
  },
  {
-  "file": "pics/g025.jpg",
-  "thumb": "pics/t025.jpg",
-  "title": "Japanese garden",
+  "file": "pics/g035.jpg",
+  "thumb": "pics/t035.jpg",
+  "title": "Watermill",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "photo3/007",
+  "seed": 1958955543
+ },
+ {
+  "file": "pics/g036.jpg",
+  "thumb": "pics/t036.jpg",
+  "title": "Christmas Market",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "water4/006",
+  "seed": 850227430
+ },
+ {
+  "file": "pics/g037.jpg",
+  "thumb": "pics/t037.jpg",
+  "title": "Japanese Garden",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -276,9 +408,9 @@ window.PICS = [
   "seed": 1580217925
  },
  {
-  "file": "pics/g026.jpg",
-  "thumb": "pics/t026.jpg",
-  "title": "Colourful Mediterranean hillside town",
+  "file": "pics/g038.jpg",
+  "thumb": "pics/t038.jpg",
+  "title": "Hillside Town",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -287,9 +419,9 @@ window.PICS = [
   "seed": 534515348
  },
  {
-  "file": "pics/g027.jpg",
-  "thumb": "pics/t027.jpg",
-  "title": "Colourful Mediterranean hillside town",
+  "file": "pics/g039.jpg",
+  "thumb": "pics/t039.jpg",
+  "title": "Hillside Town",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -298,9 +430,9 @@ window.PICS = [
   "seed": 1578498836
  },
  {
-  "file": "pics/g028.jpg",
-  "thumb": "pics/t028.jpg",
-  "title": "Mosaic of colourful seashells and starfish",
+  "file": "pics/g040.jpg",
+  "thumb": "pics/t040.jpg",
+  "title": "Shell Mosaic",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -309,9 +441,31 @@ window.PICS = [
   "seed": 1265133056
  },
  {
-  "file": "pics/g029.jpg",
-  "thumb": "pics/t029.jpg",
-  "title": "Heap of colourful autumn leaves, acorns",
+  "file": "pics/g041.jpg",
+  "thumb": "pics/t041.jpg",
+  "title": "Dutch Canal",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "photo3/008",
+  "seed": 1991126308
+ },
+ {
+  "file": "pics/g042.jpg",
+  "thumb": "pics/t042.jpg",
+  "title": "Manor House Garden",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "water4/007",
+  "seed": 30164863
+ },
+ {
+  "file": "pics/g043.jpg",
+  "thumb": "pics/t043.jpg",
+  "title": "Autumn Leaves",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -320,9 +474,9 @@ window.PICS = [
   "seed": 607325800
  },
  {
-  "file": "pics/g030.jpg",
-  "thumb": "pics/t030.jpg",
-  "title": "Pile of colourful buttons, threads",
+  "file": "pics/g044.jpg",
+  "thumb": "pics/t044.jpg",
+  "title": "Buttons and Ribbons",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -331,9 +485,9 @@ window.PICS = [
   "seed": 1750598791
  },
  {
-  "file": "pics/g031.jpg",
-  "thumb": "pics/t031.jpg",
-  "title": "Cozy cabin porch",
+  "file": "pics/g045.jpg",
+  "thumb": "pics/t045.jpg",
+  "title": "Cabin Porch",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -342,9 +496,31 @@ window.PICS = [
   "seed": 928551696
  },
  {
-  "file": "pics/g032.jpg",
-  "thumb": "pics/t032.jpg",
-  "title": "Cozy reading nook",
+  "file": "pics/g046.jpg",
+  "thumb": "pics/t046.jpg",
+  "title": "Painted Ceramics",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "mosaics",
+  "from": "photo3/009",
+  "seed": 551835902
+ },
+ {
+  "file": "pics/g047.jpg",
+  "thumb": "pics/t047.jpg",
+  "title": "Fjord Village",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "water4/008",
+  "seed": 1739319249
+ },
+ {
+  "file": "pics/g048.jpg",
+  "thumb": "pics/t048.jpg",
+  "title": "Reading Nook",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -353,9 +529,9 @@ window.PICS = [
   "seed": 585418016
  },
  {
-  "file": "pics/g033.jpg",
-  "thumb": "pics/t033.jpg",
-  "title": "Cluttered artist studio",
+  "file": "pics/g049.jpg",
+  "thumb": "pics/t049.jpg",
+  "title": "Artist Studio",
   "artist": "Oil painting",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -364,9 +540,9 @@ window.PICS = [
   "seed": 901012040
  },
  {
-  "file": "pics/g034.jpg",
-  "thumb": "pics/t034.jpg",
-  "title": "English cottage garden",
+  "file": "pics/g050.jpg",
+  "thumb": "pics/t050.jpg",
+  "title": "English Cottage Garden",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -375,9 +551,31 @@ window.PICS = [
   "seed": 1567272783
  },
  {
-  "file": "pics/g035.jpg",
-  "thumb": "pics/t035.jpg",
-  "title": "Formal flower border",
+  "file": "pics/g051.jpg",
+  "thumb": "pics/t051.jpg",
+  "title": "The Pantry Shelf",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/010",
+  "seed": 504431927
+ },
+ {
+  "file": "pics/g052.jpg",
+  "thumb": "pics/t052.jpg",
+  "title": "Polished Gemstones",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "mosaics",
+  "from": "water4/009",
+  "seed": 530454400
+ },
+ {
+  "file": "pics/g053.jpg",
+  "thumb": "pics/t053.jpg",
+  "title": "Flower Border",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -386,9 +584,9 @@ window.PICS = [
   "seed": 1539945117
  },
  {
-  "file": "pics/g036.jpg",
-  "thumb": "pics/t036.jpg",
-  "title": "Greenhouse packed with colourful flowers, succulents",
+  "file": "pics/g054.jpg",
+  "thumb": "pics/t054.jpg",
+  "title": "The Greenhouse",
   "artist": "Oil painting",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -397,9 +595,9 @@ window.PICS = [
   "seed": 1846202166
  },
  {
-  "file": "pics/g037.jpg",
-  "thumb": "pics/t037.jpg",
-  "title": "Candy shop",
+  "file": "pics/g055.jpg",
+  "thumb": "pics/t055.jpg",
+  "title": "Candy Shop",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -408,9 +606,31 @@ window.PICS = [
   "seed": 710053058
  },
  {
-  "file": "pics/g038.jpg",
-  "thumb": "pics/t038.jpg",
-  "title": "Spice market",
+  "file": "pics/g056.jpg",
+  "thumb": "pics/t056.jpg",
+  "title": "Terraced Herb Garden",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/011",
+  "seed": 120333931
+ },
+ {
+  "file": "pics/g057.jpg",
+  "thumb": "pics/t057.jpg",
+  "title": "Tea Corner",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "water4/010",
+  "seed": 94869197
+ },
+ {
+  "file": "pics/g058.jpg",
+  "thumb": "pics/t058.jpg",
+  "title": "Spice Market",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -419,9 +639,9 @@ window.PICS = [
   "seed": 307401495
  },
  {
-  "file": "pics/g039.jpg",
-  "thumb": "pics/t039.jpg",
-  "title": "Colourful tropical birds on flowering branches",
+  "file": "pics/g059.jpg",
+  "thumb": "pics/t059.jpg",
+  "title": "Tropical Birds",
   "artist": "Oil painting",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -430,9 +650,9 @@ window.PICS = [
   "seed": 1375516552
  },
  {
-  "file": "pics/g040.jpg",
-  "thumb": "pics/t040.jpg",
-  "title": "Spring orchard in blossom",
+  "file": "pics/g060.jpg",
+  "thumb": "pics/t060.jpg",
+  "title": "Spring Orchard",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -441,9 +661,31 @@ window.PICS = [
   "seed": 378597331
  },
  {
-  "file": "pics/g041.jpg",
-  "thumb": "pics/t041.jpg",
-  "title": "Autumn village street",
+  "file": "pics/g061.jpg",
+  "thumb": "pics/t061.jpg",
+  "title": "Ducklings on the Pond",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "photo3/013",
+  "seed": 895478318
+ },
+ {
+  "file": "pics/g062.jpg",
+  "thumb": "pics/t062.jpg",
+  "title": "Wildflower Meadow",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "water4/011",
+  "seed": 1823656399
+ },
+ {
+  "file": "pics/g063.jpg",
+  "thumb": "pics/t063.jpg",
+  "title": "Autumn Village Lane",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -452,9 +694,9 @@ window.PICS = [
   "seed": 457483868
  },
  {
-  "file": "pics/g042.jpg",
-  "thumb": "pics/t042.jpg",
-  "title": "Candy shop",
+  "file": "pics/g064.jpg",
+  "thumb": "pics/t064.jpg",
+  "title": "Candy Shop",
   "artist": "Oil painting",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -463,9 +705,9 @@ window.PICS = [
   "seed": 2029788477
  },
  {
-  "file": "pics/g043.jpg",
-  "thumb": "pics/t043.jpg",
-  "title": "Walled hilltop village of honey-coloured stone",
+  "file": "pics/g065.jpg",
+  "thumb": "pics/t065.jpg",
+  "title": "Hilltop Village",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -474,9 +716,31 @@ window.PICS = [
   "seed": 1758407668
  },
  {
-  "file": "pics/g044.jpg",
-  "thumb": "pics/t044.jpg",
-  "title": "Crumbling ivy-covered castle ruin",
+  "file": "pics/g066.jpg",
+  "thumb": "pics/t066.jpg",
+  "title": "Bowls of Spices",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "photo3/014",
+  "seed": 303393538
+ },
+ {
+  "file": "pics/g067.jpg",
+  "thumb": "pics/t067.jpg",
+  "title": "Fishing Village",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "water4/012",
+  "seed": 1584660929
+ },
+ {
+  "file": "pics/g068.jpg",
+  "thumb": "pics/t068.jpg",
+  "title": "Ivy Castle Ruin",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -485,9 +749,9 @@ window.PICS = [
   "seed": 572064014
  },
  {
-  "file": "pics/g045.jpg",
-  "thumb": "pics/t045.jpg",
-  "title": "Spring orchard in blossom",
+  "file": "pics/g069.jpg",
+  "thumb": "pics/t069.jpg",
+  "title": "Spring Orchard",
   "artist": "Oil painting",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -496,9 +760,9 @@ window.PICS = [
   "seed": 862409982
  },
  {
-  "file": "pics/g046.jpg",
-  "thumb": "pics/t046.jpg",
-  "title": "Hot air balloon festival",
+  "file": "pics/g070.jpg",
+  "thumb": "pics/t070.jpg",
+  "title": "Balloon Festival",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -507,9 +771,31 @@ window.PICS = [
   "seed": 1202346261
  },
  {
-  "file": "pics/g047.jpg",
-  "thumb": "pics/t047.jpg",
-  "title": "Mountain lake",
+  "file": "pics/g071.jpg",
+  "thumb": "pics/t071.jpg",
+  "title": "Tulips and Daffodils",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "photo3/015",
+  "seed": 1761724814
+ },
+ {
+  "file": "pics/g072.jpg",
+  "thumb": "pics/t072.jpg",
+  "title": "Ducklings on the Pond",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "water4/013",
+  "seed": 545412669
+ },
+ {
+  "file": "pics/g073.jpg",
+  "thumb": "pics/t073.jpg",
+  "title": "Mountain Lake",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -518,9 +804,9 @@ window.PICS = [
   "seed": 1326726078
  },
  {
-  "file": "pics/g048.jpg",
-  "thumb": "pics/t048.jpg",
-  "title": "Japanese garden",
+  "file": "pics/g074.jpg",
+  "thumb": "pics/t074.jpg",
+  "title": "Japanese Garden",
   "artist": "Oil painting",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -529,9 +815,9 @@ window.PICS = [
   "seed": 133558013
  },
  {
-  "file": "pics/g049.jpg",
-  "thumb": "pics/t049.jpg",
-  "title": "Heap of colourful autumn leaves, acorns",
+  "file": "pics/g075.jpg",
+  "thumb": "pics/t075.jpg",
+  "title": "Autumn Leaves",
   "artist": "Watercolor",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -540,9 +826,31 @@ window.PICS = [
   "seed": 1035289435
  },
  {
-  "file": "pics/g050.jpg",
-  "thumb": "pics/t050.jpg",
-  "title": "Pile of colourful buttons, threads",
+  "file": "pics/g076.jpg",
+  "thumb": "pics/t076.jpg",
+  "title": "Greek Island Village",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "photo3/017",
+  "seed": 399490292
+ },
+ {
+  "file": "pics/g077.jpg",
+  "thumb": "pics/t077.jpg",
+  "title": "Italian Deli",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "water4/014",
+  "seed": 762155228
+ },
+ {
+  "file": "pics/g078.jpg",
+  "thumb": "pics/t078.jpg",
+  "title": "Buttons and Ribbons",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -551,9 +859,9 @@ window.PICS = [
   "seed": 1362970832
  },
  {
-  "file": "pics/g051.jpg",
-  "thumb": "pics/t051.jpg",
-  "title": "Mosaic of colourful seashells and starfish",
+  "file": "pics/g079.jpg",
+  "thumb": "pics/t079.jpg",
+  "title": "Shell Mosaic",
   "artist": "Oil painting",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -562,9 +870,31 @@ window.PICS = [
   "seed": 1745064529
  },
  {
-  "file": "pics/g052.jpg",
-  "thumb": "pics/t052.jpg",
-  "title": "Cozy cottage kitchen",
+  "file": "pics/g080.jpg",
+  "thumb": "pics/t080.jpg",
+  "title": "Skeins of Wool",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "mosaics",
+  "from": "photo3/018",
+  "seed": 427687104
+ },
+ {
+  "file": "pics/g081.jpg",
+  "thumb": "pics/t081.jpg",
+  "title": "Lavender Field",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "water4/015",
+  "seed": 315060169
+ },
+ {
+  "file": "pics/g082.jpg",
+  "thumb": "pics/t082.jpg",
+  "title": "Cottage Kitchen",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -573,9 +903,9 @@ window.PICS = [
   "seed": 103694107
  },
  {
-  "file": "pics/g053.jpg",
-  "thumb": "pics/t053.jpg",
-  "title": "Cozy cottage kitchen",
+  "file": "pics/g083.jpg",
+  "thumb": "pics/t083.jpg",
+  "title": "Cottage Kitchen",
   "artist": "Storybook",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -584,9 +914,31 @@ window.PICS = [
   "seed": 324088520
  },
  {
-  "file": "pics/g054.jpg",
-  "thumb": "pics/t054.jpg",
-  "title": "English cottage garden",
+  "file": "pics/g084.jpg",
+  "thumb": "pics/t084.jpg",
+  "title": "Tea Corner",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/019",
+  "seed": 2106969317
+ },
+ {
+  "file": "pics/g085.jpg",
+  "thumb": "pics/t085.jpg",
+  "title": "Windmill on the Hill",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "water4/016",
+  "seed": 1738630124
+ },
+ {
+  "file": "pics/g086.jpg",
+  "thumb": "pics/t086.jpg",
+  "title": "English Cottage Garden",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -595,9 +947,9 @@ window.PICS = [
   "seed": 942218525
  },
  {
-  "file": "pics/g055.jpg",
-  "thumb": "pics/t055.jpg",
-  "title": "Tulip field",
+  "file": "pics/g087.jpg",
+  "thumb": "pics/t087.jpg",
+  "title": "Tulip Field",
   "artist": "Storybook",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -606,9 +958,31 @@ window.PICS = [
   "seed": 1144301703
  },
  {
-  "file": "pics/g056.jpg",
-  "thumb": "pics/t056.jpg",
-  "title": "Stacks of colourful lobster pots",
+  "file": "pics/g088.jpg",
+  "thumb": "pics/t088.jpg",
+  "title": "Sailing Marina",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "photo3/021",
+  "seed": 707183831
+ },
+ {
+  "file": "pics/g089.jpg",
+  "thumb": "pics/t089.jpg",
+  "title": "Moroccan Courtyard",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "water4/017",
+  "seed": 332872338
+ },
+ {
+  "file": "pics/g090.jpg",
+  "thumb": "pics/t090.jpg",
+  "title": "Lobster Pots",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -617,9 +991,31 @@ window.PICS = [
   "seed": 964363153
  },
  {
-  "file": "pics/g057.jpg",
-  "thumb": "pics/t057.jpg",
-  "title": "Basket full of kittens",
+  "file": "pics/g091.jpg",
+  "thumb": "pics/t091.jpg",
+  "title": "Parrots in the Tree",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "photo3/022",
+  "seed": 1376129972
+ },
+ {
+  "file": "pics/g092.jpg",
+  "thumb": "pics/t092.jpg",
+  "title": "Terraced Herb Garden",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "water4/020",
+  "seed": 457234440
+ },
+ {
+  "file": "pics/g093.jpg",
+  "thumb": "pics/t093.jpg",
+  "title": "Basket of Kittens",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -628,9 +1024,31 @@ window.PICS = [
   "seed": 225422141
  },
  {
-  "file": "pics/g058.jpg",
-  "thumb": "pics/t058.jpg",
-  "title": "Candy shop",
+  "file": "pics/g094.jpg",
+  "thumb": "pics/t094.jpg",
+  "title": "Berries and Peaches",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "photo3/023",
+  "seed": 784661762
+ },
+ {
+  "file": "pics/g095.jpg",
+  "thumb": "pics/t095.jpg",
+  "title": "Fishing Cottages",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "water4/021",
+  "seed": 694191806
+ },
+ {
+  "file": "pics/g096.jpg",
+  "thumb": "pics/t096.jpg",
+  "title": "Candy Shop",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -639,9 +1057,31 @@ window.PICS = [
   "seed": 1195646584
  },
  {
-  "file": "pics/g059.jpg",
-  "thumb": "pics/t059.jpg",
-  "title": "Spring orchard in blossom",
+  "file": "pics/g097.jpg",
+  "thumb": "pics/t097.jpg",
+  "title": "Frosty Garden",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "photo3/024",
+  "seed": 1411818131
+ },
+ {
+  "file": "pics/g098.jpg",
+  "thumb": "pics/t098.jpg",
+  "title": "Hedgehogs in Autumn",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "water4/022",
+  "seed": 1342493563
+ },
+ {
+  "file": "pics/g099.jpg",
+  "thumb": "pics/t099.jpg",
+  "title": "Spring Orchard",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -650,9 +1090,31 @@ window.PICS = [
   "seed": 1393141936
  },
  {
-  "file": "pics/g060.jpg",
-  "thumb": "pics/t060.jpg",
-  "title": "Small mossy stone tower house",
+  "file": "pics/g100.jpg",
+  "thumb": "pics/t100.jpg",
+  "title": "Half-Timbered Street",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "photo3/025",
+  "seed": 410968732
+ },
+ {
+  "file": "pics/g101.jpg",
+  "thumb": "pics/t101.jpg",
+  "title": "Bowls of Spices",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "water4/023",
+  "seed": 1013715006
+ },
+ {
+  "file": "pics/g102.jpg",
+  "thumb": "pics/t102.jpg",
+  "title": "Mossy Tower House",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -661,9 +1123,31 @@ window.PICS = [
   "seed": 5450703
  },
  {
-  "file": "pics/g061.jpg",
-  "thumb": "pics/t061.jpg",
-  "title": "Colourful Mediterranean hillside town",
+  "file": "pics/g103.jpg",
+  "thumb": "pics/t103.jpg",
+  "title": "Moroccan Courtyard",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "photo3/026",
+  "seed": 1018572767
+ },
+ {
+  "file": "pics/g104.jpg",
+  "thumb": "pics/t104.jpg",
+  "title": "Frosty Garden",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "water4/024",
+  "seed": 1142979378
+ },
+ {
+  "file": "pics/g105.jpg",
+  "thumb": "pics/t105.jpg",
+  "title": "Hillside Town",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
@@ -672,14 +1156,355 @@ window.PICS = [
   "seed": 572846760
  },
  {
-  "file": "pics/g062.jpg",
-  "thumb": "pics/t062.jpg",
-  "title": "Stained glass style pattern of flowers",
+  "file": "pics/g106.jpg",
+  "thumb": "pics/t106.jpg",
+  "title": "Patchwork Quilt",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "mosaics",
+  "from": "photo3/027",
+  "seed": 476077939
+ },
+ {
+  "file": "pics/g107.jpg",
+  "thumb": "pics/t107.jpg",
+  "title": "Watermill",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "water4/025",
+  "seed": 1394291447
+ },
+ {
+  "file": "pics/g108.jpg",
+  "thumb": "pics/t108.jpg",
+  "title": "Stained Glass Flowers",
   "artist": "Photo",
   "date": "",
   "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
   "pack": "mosaics",
   "from": "photo1/027",
   "seed": 1392793509
+ },
+ {
+  "file": "pics/g109.jpg",
+  "thumb": "pics/t109.jpg",
+  "title": "Window Seat",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/028",
+  "seed": 1123358772
+ },
+ {
+  "file": "pics/g110.jpg",
+  "thumb": "pics/t110.jpg",
+  "title": "Alpine Meadow",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "water4/026",
+  "seed": 1581252002
+ },
+ {
+  "file": "pics/g111.jpg",
+  "thumb": "pics/t111.jpg",
+  "title": "Dahlia Field",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/029",
+  "seed": 1031023765
+ },
+ {
+  "file": "pics/g112.jpg",
+  "thumb": "pics/t112.jpg",
+  "title": "Skeins of Wool",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "mosaics",
+  "from": "water4/027",
+  "seed": 938570711
+ },
+ {
+  "file": "pics/g113.jpg",
+  "thumb": "pics/t113.jpg",
+  "title": "Holly and Robins",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "photo3/031",
+  "seed": 754718756
+ },
+ {
+  "file": "pics/g114.jpg",
+  "thumb": "pics/t114.jpg",
+  "title": "Window Seat",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "water4/028",
+  "seed": 622765402
+ },
+ {
+  "file": "pics/g115.jpg",
+  "thumb": "pics/t115.jpg",
+  "title": "Lavender Field",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "photo3/033",
+  "seed": 1041904548
+ },
+ {
+  "file": "pics/g116.jpg",
+  "thumb": "pics/t116.jpg",
+  "title": "Kitchen Garden",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "water4/029",
+  "seed": 141586696
+ },
+ {
+  "file": "pics/g117.jpg",
+  "thumb": "pics/t117.jpg",
+  "title": "Lighthouse on the Headland",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "photo3/034",
+  "seed": 430766188
+ },
+ {
+  "file": "pics/g118.jpg",
+  "thumb": "pics/t118.jpg",
+  "title": "Rowing Boats on the Beach",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "water4/030",
+  "seed": 1411108352
+ },
+ {
+  "file": "pics/g119.jpg",
+  "thumb": "pics/t119.jpg",
+  "title": "Zellige Mosaic",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "mosaics",
+  "from": "photo3/036",
+  "seed": 648813845
+ },
+ {
+  "file": "pics/g120.jpg",
+  "thumb": "pics/t120.jpg",
+  "title": "Flamingos",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "water4/031",
+  "seed": 1128776298
+ },
+ {
+  "file": "pics/g121.jpg",
+  "thumb": "pics/t121.jpg",
+  "title": "Potting Shed",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/037",
+  "seed": 207381661
+ },
+ {
+  "file": "pics/g122.jpg",
+  "thumb": "pics/t122.jpg",
+  "title": "Berries and Peaches",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "water4/032",
+  "seed": 721903849
+ },
+ {
+  "file": "pics/g123.jpg",
+  "thumb": "pics/t123.jpg",
+  "title": "Rose Arbour",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/038",
+  "seed": 1589614888
+ },
+ {
+  "file": "pics/g124.jpg",
+  "thumb": "pics/t124.jpg",
+  "title": "Pumpkin Patch",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "water4/033",
+  "seed": 639758679
+ },
+ {
+  "file": "pics/g125.jpg",
+  "thumb": "pics/t125.jpg",
+  "title": "Flamingos",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "photo3/040",
+  "seed": 909555632
+ },
+ {
+  "file": "pics/g126.jpg",
+  "thumb": "pics/t126.jpg",
+  "title": "Half-Timbered Street",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "water4/034",
+  "seed": 1566504059
+ },
+ {
+  "file": "pics/g127.jpg",
+  "thumb": "pics/t127.jpg",
+  "title": "Honey and Honeycomb",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "photo3/041",
+  "seed": 141774001
+ },
+ {
+  "file": "pics/g128.jpg",
+  "thumb": "pics/t128.jpg",
+  "title": "Painted Ceramics",
+  "artist": "Watercolor",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "mosaics",
+  "from": "water4/036",
+  "seed": 101805659
+ },
+ {
+  "file": "pics/g129.jpg",
+  "thumb": "pics/t129.jpg",
+  "title": "Abbey Ruin",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "photo3/043",
+  "seed": 1858753204
+ },
+ {
+  "file": "pics/g130.jpg",
+  "thumb": "pics/t130.jpg",
+  "title": "Alpine Meadow",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "photo3/044",
+  "seed": 166352196
+ },
+ {
+  "file": "pics/g131.jpg",
+  "thumb": "pics/t131.jpg",
+  "title": "Polished Gemstones",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "mosaics",
+  "from": "photo3/045",
+  "seed": 636828024
+ },
+ {
+  "file": "pics/g132.jpg",
+  "thumb": "pics/t132.jpg",
+  "title": "The Conservatory",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "starter",
+  "from": "photo3/047",
+  "seed": 1981584418
+ },
+ {
+  "file": "pics/g133.jpg",
+  "thumb": "pics/t133.jpg",
+  "title": "Fishing Cottages",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "harbors",
+  "from": "photo3/048",
+  "seed": 1399242912
+ },
+ {
+  "file": "pics/g134.jpg",
+  "thumb": "pics/t134.jpg",
+  "title": "Hedgehogs in Autumn",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "friends",
+  "from": "photo3/049",
+  "seed": 858560019
+ },
+ {
+  "file": "pics/g135.jpg",
+  "thumb": "pics/t135.jpg",
+  "title": "Macaron Towers",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "pantry",
+  "from": "photo3/050",
+  "seed": 491567124
+ },
+ {
+  "file": "pics/g136.jpg",
+  "thumb": "pics/t136.jpg",
+  "title": "Christmas Market",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "seasons",
+  "from": "photo3/051",
+  "seed": 1753537453
+ },
+ {
+  "file": "pics/g137.jpg",
+  "thumb": "pics/t137.jpg",
+  "title": "Manor House Garden",
+  "artist": "Photo",
+  "date": "",
+  "source": "AI-made picture (Z-Image-Turbo, Apache-2.0; enlarged with Real-ESRGAN, BSD-3)",
+  "pack": "villages",
+  "from": "photo3/052",
+  "seed": 1339980982
  }
 ];

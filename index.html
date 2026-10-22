@@ -23,7 +23,7 @@
   .logo { width:46px; height:46px; border-radius:15px; background:linear-gradient(145deg,#b177c2,#6b3f7a); box-shadow:0 6px 14px rgba(107,63,122,.4), inset 0 2px 0 rgba(255,255,255,.35); display:flex; align-items:center; justify-content:center; font-size:27px; flex:none; }
   h1 { margin:0; font-size:22px; font-weight:900; letter-spacing:-.4px; color:var(--berry2); }
   .sub { font-size:13px; color:var(--ink2); font-weight:700; margin-top:2px; }
-  .iconbtn { margin-left:auto; width:40px; height:40px; border-radius:50%; border:1px solid #fff; background:var(--card); box-shadow:0 3px 10px rgba(80,40,90,.15); font-size:19px; cursor:pointer; }
+  .iconbtn { margin-left:auto; width:46px; height:46px; border-radius:50%; border:1px solid #fff; background:var(--card); box-shadow:0 3px 10px rgba(80,40,90,.15); font-size:19px; cursor:pointer; }
   h2.sec { font-size:15px; margin:14px 4px 8px; color:var(--ink2); font-weight:900; letter-spacing:.3px; text-transform:uppercase; }
   .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
   @media (min-width:560px) { .grid { grid-template-columns:repeat(3,1fr); } }
@@ -37,7 +37,7 @@
   .badge { position:absolute; top:8px; right:8px; background:rgba(255,255,255,.94); border-radius:999px; padding:4px 9px; font-weight:900; font-size:12px; color:var(--berry2); box-shadow:0 2px 8px rgba(0,0,0,.18); }
   .badge.done { background:linear-gradient(135deg,#ffd45e,#f2b632); color:#5e4a0a; }
   .foot { text-align:center; color:var(--ink2); font-size:12.5px; font-weight:700; margin:22px 0 4px; line-height:1.5; }
-  .foot button { border:0; background:none; color:var(--berry); font:inherit; font-weight:900; text-decoration:underline; cursor:pointer; }
+  .foot button { padding:14px 12px; min-height:44px; border:0; background:none; color:var(--berry); font:inherit; font-weight:900; text-decoration:underline; cursor:pointer; }
 
   /* daily puzzle card */
   .daily { display:flex; gap:12px; width:100%; border:2px solid #fff; border-radius:22px; padding:12px; margin:0 0 12px; text-align:left; cursor:pointer; font:inherit; color:inherit;
@@ -60,7 +60,7 @@
 
   /* tabs */
   .tabs { display:flex; gap:4px; padding:4px; border-radius:16px; background:rgba(255,255,255,.62); border:1px solid #fff; margin:4px 0 12px; }
-  .tabs button { flex:1; border:0; background:transparent; padding:11px 6px; border-radius:12px; font:inherit; font-weight:900; font-size:15px; color:var(--ink2); cursor:pointer; }
+  .tabs button { flex:1; border:0; background:transparent; padding:14px 6px; min-height:46px; border-radius:12px; font:inherit; font-weight:900; font-size:15px; color:var(--ink2); cursor:pointer; }
   .tabs button.on { background:linear-gradient(135deg,#b177c2,#8e4f9e); color:#fff; box-shadow:0 4px 10px rgba(142,79,158,.4); }
 
   /* collection wall */
@@ -108,7 +108,7 @@
   /* pictures: pack filter chips + locks */
   .chips { display:flex; gap:8px; overflow-x:auto; padding:2px 2px 12px; margin:0 -2px; scrollbar-width:none; }
   .chips::-webkit-scrollbar { display:none; }
-  .chipb { flex:none; border:0; border-radius:999px; padding:9px 15px; background:#fff; box-shadow:0 3px 8px rgba(80,40,90,.12); font:inherit; font-weight:800; font-size:13.5px; color:var(--ink); cursor:pointer; }
+  .chipb { flex:none; border:0; border-radius:999px; padding:13px 16px; min-height:44px; background:#fff; box-shadow:0 3px 8px rgba(80,40,90,.12); font:inherit; font-weight:800; font-size:13.5px; color:var(--ink); cursor:pointer; }
   .chipb.on { background:linear-gradient(135deg,#b177c2,#8e4f9e); color:#fff; }
   .pic.locked img { filter:saturate(.55) brightness(.9); }
   .badge.lock { background:rgba(40,20,50,.82); color:#fff; }
@@ -139,7 +139,7 @@
   .scard .pr.owned { color:#2f7a48; }
   .scard .use { position:absolute; top:12px; left:12px; background:rgba(47,122,72,.92); color:#fff; border-radius:999px; font-size:11px; font-weight:900; padding:3px 8px; }
   .scard .lk { position:absolute; top:12px; right:12px; background:rgba(40,20,50,.8); color:#fff; border-radius:999px; font-size:11px; font-weight:900; padding:3px 8px; }
-  .restore { display:block; margin:20px auto 4px; border:0; background:none; font:inherit; font-weight:900; color:var(--berry); text-decoration:underline; cursor:pointer; font-size:14px; }
+  .restore { display:block; margin:12px auto 4px; padding:14px 18px; min-height:44px; border:0; background:none; font:inherit; font-weight:900; color:var(--berry); text-decoration:underline; cursor:pointer; font-size:14px; }
   .isheet h3 { margin:12px 2px 2px; font-size:20px; font-weight:900; }
   .isheet .pv { border-radius:16px; overflow:hidden; background:#f3e9f5; min-height:110px; display:flex; align-items:center; justify-content:center; }
   .isheet .pv .bgprev { width:100%; height:140px; }
@@ -154,7 +154,7 @@
   /* play */
   #play { background: radial-gradient(circle at 50% 30%, #5d4a68 0, #3b2d45 70%, #2c2134 100%); }
   .bar { display:flex; align-items:center; gap:8px; padding:calc(env(safe-area-inset-top) + 8px) 10px 8px; color:#fff; }
-  .bar .back { width:42px; height:42px; border-radius:50%; border:0; background:rgba(255,255,255,.14); color:#fff; font-size:22px; font-weight:900; cursor:pointer; flex:none; }
+  .bar .back { width:46px; height:46px; border-radius:50%; border:0; background:rgba(255,255,255,.14); color:#fff; font-size:22px; font-weight:900; cursor:pointer; flex:none; }
   .bar .tt { flex:1; min-width:0; }
   .bar .tt b { display:block; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .bar .tt small { display:block; font-size:12px; opacity:.75; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -270,11 +270,11 @@
 
 <canvas id="confetti" class="hidden"></canvas>
 
-<script src="store-bridge.js?v=13"></script>
+<script src="store-bridge.js?v=18"></script>
 <script>window.STORE_LIVE = false; /* the store build turns this on: no test dates, no free test unlock, no debug hooks */</script>
-<script src="pics.js?v=13"></script>
-<script src="music.js?v=13"></script>
-<script src="engine.js?v=9"></script>
+<script src="pics.js?v=18"></script>
+<script src="music.js?v=18"></script>
+<script src="engine.js?v=18"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -299,6 +299,8 @@
   const shortDate = (s) => new Date(s + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
 
   // ---------- Daily Puzzle: same picture and same cut for everyone that day; every picture comes up once before any repeats ----------
+  // public pages (published by the Kelbra site after David approves; the folder name is permanent once the app is in the stores)
+  const LEGAL = 'https://games.kelbrasolutions.net/pieceberry';
   const DAILY_N = 48, DKEY = (s) => 'jg_daily_' + s;
   let PERM = null;
   function dailyIndex(s) {
@@ -744,6 +746,7 @@
       '<div class="set">Sound<button class="sw' + (Jig.sound ? ' on' : '') + '" data-k="sound"></button></div>' +
       '<div class="set">Faint picture on the board<button class="sw' + (Jig.ghost ? ' on' : '') + '" data-k="ghost"></button></div>' +
       '<button class="btn sec" id="restoreBtn" style="margin-top:12px">Restore purchases</button>' +
+      '<p class="sub" style="margin-top:14px"><a href="' + LEGAL + '/privacy.html" target="_blank" rel="noopener">Privacy Policy</a> &middot; <a href="' + LEGAL + '/support.html" target="_blank" rel="noopener">Support</a></p>' +
       '<p class="sub" style="margin-top:12px">Pieceberry has no ads, no accounts and collects no data. Your puzzles are saved on this device.</p>');
     $('restoreBtn').onclick = () => { $('infoSheet').classList.add('hidden'); restorePurchases(); };
     document.querySelectorAll('.sw').forEach((b) => b.onclick = () => { const k = b.dataset.k; Jig[k] = !Jig[k]; setPref(k, Jig[k]); b.classList.toggle('on', Jig[k]); syncTools(); });
