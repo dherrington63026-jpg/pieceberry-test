@@ -122,7 +122,7 @@
     }
     scroll = 0; drag = null; ptrs.clear(); Jig.edgesOnly = false; Jig.peek = false;
     layout();
-    if (G._pendingLoose) { G._pendingLoose.forEach(([id, u, v, g]) => { const p = G.pieces[id]; p.x = L.bx + u * L.pw; p.y = L.by + v * L.ph; p.group = g; G.loose.push(id); }); delete G._pendingLoose; }
+    if (G._pendingLoose) { G._pendingLoose.forEach(([id, u, v, g]) => { const p = G.pieces[id]; p.x = L.bx + u * L.pw; p.y = L.by + v * L.ph; p.group = g; G.loose.push(id); }); delete G._pendingLoose; nudgeAll(); }
     if (!ro) { ro = new ResizeObserver(() => Jig.relayout()); ro.observe(cv.parentElement); }
     if (!cv._wired) wire();
     if (!saved) save();
@@ -141,6 +141,7 @@
     before.forEach(([id, u, v]) => { const p = G.pieces[id]; p.x = L.bx + u * L.pw; p.y = L.by + v * L.ph; });
     // pieces that now sit outside (or under the tray) are pulled back onto the visible table
     G.loose.forEach(id => { const p = G.pieces[id]; p.x = Math.max(4, Math.min(L.w - L.pw - 4, p.x)); p.y = Math.max(4, Math.min(L.trayTop - L.ph - 4, p.y)); });
+    nudgeAll();
     changed();
   };
 
@@ -399,6 +400,20 @@
     clampScroll(); tock(false); save();
   }
 
+  // The round + / - / Fit buttons sit over the top-right corner of the table (see .zoom in index.html). A loose piece must never come to rest
+  // under them (the buttons would take the touch and the piece could not be picked up), so groups are nudged left, out of that strip.
+  function nudgeFromButtons(ms) {
+    if (!ms.length || !L) return;
+    const x0 = L.w - 62, y1 = 176; let over = 0;
+    ms.forEach(p => {
+      const sx1 = (p.x + L.pw) * view.s + view.x, sy0 = p.y * view.s + view.y, sy1 = (p.y + L.ph) * view.s + view.y;
+      if (sx1 > x0 && sy0 < y1 && sy1 > 0) over = Math.max(over, sx1 - x0);
+    });
+    if (over > 0) { const d = over / view.s; ms.forEach(p => { p.x -= d; }); }
+  }
+  function nudgeAll() { [...new Set(G.loose.map(id => G.pieces[id].group))].forEach(g => nudgeFromButtons(members(g))); }
+  function settle(g) { nudgeFromButtons(members(g)); save(); }
+
   function drop(g, px, py) {
     let ms = members(g);
     // back into the tray (single pieces only)
@@ -427,11 +442,11 @@
         if (Math.hypot(p.x - ex, p.y - ey) < L.snap) {
           const ox = ex - p.x, oy = ey - p.y;
           ms.forEach(m => { m.x += ox; m.y += oy; m.group = q.group; });
-          toTop(q.group); tock(false); buzz(10); save(); return;
+          toTop(q.group); tock(false); buzz(10); settle(q.group); return;
         }
       }
     }
-    save();
+    settle(g);
   }
 
   function place(ms) {
