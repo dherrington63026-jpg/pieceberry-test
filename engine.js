@@ -136,12 +136,19 @@
   // Called when the screen size changes (rotate, resize): re-fit everything and keep loose pieces at the same spot on the picture.
   Jig.relayout = function () {
     if (!G) return;
+    // keep the player's zoom and the spot they are looking at (a phone browser's address bar sliding away also triggers this)
+    const keep = view.s > 1.001 ? { s: view.s, fx: (L.w / 2 - view.x) / view.s / L.w, fy: (L.trayTop / 2 - view.y) / view.s / L.trayTop } : null;
     const before = G.loose.map(id => { const p = G.pieces[id]; return [id, (p.x - L.bx) / L.pw, (p.y - L.by) / L.ph]; });
     layout();
     before.forEach(([id, u, v]) => { const p = G.pieces[id]; p.x = L.bx + u * L.pw; p.y = L.by + v * L.ph; });
     // pieces that now sit outside (or under the tray) are pulled back onto the visible table
     G.loose.forEach(id => { const p = G.pieces[id]; p.x = Math.max(4, Math.min(L.w - L.pw - 4, p.x)); p.y = Math.max(4, Math.min(L.trayTop - L.ph - 4, p.y)); });
+    if (keep) {
+      view.s = Math.min(keep.s, maxZoom()); view.x = L.w / 2 - keep.fx * L.w * view.s; view.y = L.trayTop / 2 - keep.fy * L.trayTop * view.s;
+      clampView(); scheduleQuality();
+    }
     nudgeAll();
+    dirty = true; drawFrame();
     changed();
   };
 
@@ -160,7 +167,7 @@
     L.snap = Math.max(12, Math.min(pw, ph) * 0.32);
     G.pieces.forEach(p => { p.sprite = null; p.path = null; });
     view = { s: 1, x: 0, y: 0 }; buildLayer();
-    clampScroll(); dirty = true;
+    clampScroll(); dirty = true; drawFrame();   // draw at once: resizing a canvas blanks it, so waiting for the next frame would flash an empty table
   }
 
   // board layer: placed pieces are painted here once (and again whenever the sharpness changes)

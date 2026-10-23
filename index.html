@@ -20,7 +20,7 @@
     background: radial-gradient(circle at 12% 0%, #fff7fb 0, rgba(255,247,251,0) 42%), radial-gradient(circle at 92% 28%, #e3d3f0 0, rgba(227,211,240,0) 46%), linear-gradient(170deg,#f6ecf3 0%,#e9dcef 55%,#dfe3f2 100%); }
   .wrap { max-width:640px; margin:0 auto; width:100%; }
   header { display:flex; align-items:center; gap:10px; padding:4px 2px 12px; }
-  .logo { width:46px; height:46px; border-radius:15px; background:linear-gradient(145deg,#b177c2,#6b3f7a); box-shadow:0 6px 14px rgba(107,63,122,.4), inset 0 2px 0 rgba(255,255,255,.35); display:flex; align-items:center; justify-content:center; font-size:27px; flex:none; }
+  .logo { width:46px; height:46px; border-radius:11px; box-shadow:0 6px 14px rgba(53,30,82,.38); flex:none; object-fit:cover; }
   h1 { margin:0; font-size:22px; font-weight:900; letter-spacing:-.4px; color:var(--berry2); }
   .sub { font-size:13px; color:var(--ink2); font-weight:700; margin-top:2px; }
   .iconbtn { margin-left:auto; width:46px; height:46px; border-radius:50%; border:1px solid #fff; background:var(--card); box-shadow:0 3px 10px rgba(80,40,90,.15); font-size:19px; cursor:pointer; }
@@ -39,6 +39,7 @@
   .foot { text-align:center; color:var(--ink2); font-size:12.5px; font-weight:700; margin:22px 0 4px; line-height:1.5; }
   .foot button { padding:14px 12px; min-height:44px; border:0; background:none; color:var(--berry); font:inherit; font-weight:900; text-decoration:underline; cursor:pointer; }
 
+  @media (min-width:900px) { .wrap { max-width:940px; } .grid, .wall, .sgrid { grid-template-columns:repeat(4,minmax(0,1fr)); } h1 { font-size:26px; } .daily .dt { font-size:22px; } .logo { width:54px; height:54px; font-size:32px; border-radius:18px; } }
   /* daily puzzle card */
   .daily { display:flex; gap:12px; width:100%; border:2px solid #fff; border-radius:22px; padding:12px; margin:0 0 12px; text-align:left; cursor:pointer; font:inherit; color:inherit;
     background:linear-gradient(150deg,#fff 0%,#f8eef9 60%,#fdf3dc 100%); box-shadow:0 7px 0 rgba(80,40,90,.12), 0 12px 26px rgba(80,40,90,.14); transition:transform .12s; }
@@ -205,7 +206,7 @@
 <div id="home" class="screen">
   <div class="wrap">
     <header>
-      <div class="logo">🧩</div>
+      <img class="logo" src="icon.png" alt="">
       <div><h1>Quiltjig</h1><div class="sub">Calm jigsaw puzzles · no ads, ever</div></div>
       <button class="iconbtn" id="gear" aria-label="Settings">⚙️</button>
     </header>
@@ -270,11 +271,11 @@
 
 <canvas id="confetti" class="hidden"></canvas>
 
-<script src="store-bridge.js?v=19"></script>
+<script src="store-bridge.js?v=29"></script>
 <script>window.STORE_LIVE = false; /* the store build turns this on: no test dates, no free test unlock, no debug hooks */</script>
-<script src="pics.js?v=19"></script>
-<script src="music.js?v=19"></script>
-<script src="engine.js?v=19"></script>
+<script src="pics.js?v=29"></script>
+<script src="music.js?v=29"></script>
+<script src="engine.js?v=29"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -765,6 +766,98 @@
   }
 
   applyLook(); storeSync(); renderHome();
+
+  /*SHOT-START*/
+  // ?shot=home|wall|shop|play|zoom|style : sets up a nice state for store screenshots. Test pages only, never in the store build.
+  (function () {
+    if (window.STORE_LIVE) return;
+    const q = new URLSearchParams(location.search).get('shot'); if (!q) return;
+    const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+    const find = (title, style) => PICS.findIndex((p) => p.title === title && (!style || p.artist === style));
+    const rng = (() => { let a = 20261023; return () => { a = (a * 1103515245 + 12345) & 0x7fffffff; return a / 0x7fffffff; }; })();
+    async function arrange(frac, loose) {
+      let d = null;
+      for (let i = 0; i < 600; i++) { d = Jig._debug && Jig._debug(); if (d && d.G && d.L) break; await wait(100); }
+      if (!d || !d.G) throw new Error('puzzle did not start');
+      await wait(600);
+      const { G, L } = Jig._debug(), n = G.pieces.length;
+      const centers = [[1.5, 2], [G.rows - 2, G.cols - 3], [G.rows / 2, G.cols * 0.7]].map(([r, c]) => ({ r, c }));
+      const order = G.pieces.map((p) => ({ p, d: Math.min(...centers.map((c) => Math.hypot(p.r - c.r, p.c - c.c))) + rng() * 1.1 })).sort((a, b) => a.d - b.d);
+      const k = Math.round(n * frac), placed = order.slice(0, k).map((o) => o.p);
+      placed.forEach((p) => { p.placed = true; p.x = L.bx + p.c * L.pw; p.y = L.by + p.r * L.ph; });
+      G.tray = G.tray.filter((id) => !G.pieces[id].placed); G.loose = G.loose.filter((id) => !G.pieces[id].placed);
+      const rest = order.slice(k).map((o) => o.p);
+      for (let i = 0; i < loose && i < rest.length; i++) {
+        const p = rest[Math.floor(rng() * rest.length)]; if (G.loose.indexOf(p.id) >= 0 || p.placed) continue;
+        G.tray = G.tray.filter((id) => id !== p.id); G.loose.push(p.id); p.group = p.id;
+        p.x = Math.max(6, Math.min(L.w - L.pw - 80, L.bx + p.c * L.pw + (rng() - 0.5) * L.pw * 2.4)); p.y = Math.max(6, Math.min(L.trayTop - L.ph - 8, L.by + p.r * L.ph + (rng() - 0.5) * L.ph * 2.4));
+      }
+      Jig.setPieceStyle(Jig.pieceStyle); Jig.redraw(); Jig.onChange(Jig.progress());
+      return { G, L };
+    }
+    async function fakeHistory() {
+      const names = [['Rose Arbour', 'Photo'], ['Hedgehogs in Autumn', 'Photo'], ['Tulips and Daffodils', 'Photo'], ['Parrots in the Tree', 'Photo'], ['Lavender Field', 'Watercolor'],
+        ['Honey and Honeycomb', 'Photo'], ['Macaron Towers', 'Photo'], ['Alpine Meadow', 'Watercolor'], ['Dahlia Field', 'Photo'], ['Watermill', 'Watercolor'], ['Greek Island Village', 'Photo'], ['Flamingos', 'Photo']];
+      const c = {}; const t = today();
+      names.forEach(([nm, st], k) => { const i = find(nm, st); if (i < 0) return; c[picKey(i)] = { first: addDays(t, -k - 1), last: addDays(t, -k - 1), times: k === 2 ? 2 : 1, pieces: [24, 48, 108][k % 3], daily: k % 4 === 0 ? 1 : 0 }; });
+      store.set('jg_collection', c);
+      const days = [1, 2, 3, 4, 5].map((k) => addDays(t, -k)); store.set('jg_streak', { last: addDays(t, -1), count: 5, best: 9, days });
+      renderHome();
+    }
+    (async () => {
+      await wait(300); await fakeHistory(); document.body.style.cursor = 'none';
+      if (q === 'home') { setTab('pics'); }
+      else if (q === 'wall') { setTab('coll'); $('home').scrollTop = $('tabPics').offsetTop - 16; }
+      else if (q === 'shop') { setTab('shop'); $('home').scrollTop = $('tabPics').offsetTop - 16; }
+      else if (q === 'demo') {
+        // self-playing demo for the ad video: the real engine, driven with real pointer events (test pages only)
+        const i = find('Tulips and Daffodils', 'Photo'); begin(i, 24, null);
+        let d = null; for (let k = 0; k < 600; k++) { d = Jig._debug && Jig._debug(); if (d && d.G && d.L) break; await wait(100); } await wait(800);
+        const cv = $('cv'), R = () => cv.getBoundingClientRect();
+        const ev = (t, x, y, id = 1) => cv.dispatchEvent(new PointerEvent(t, { clientX: x + R().left, clientY: y + R().top, pointerId: id, pointerType: 'mouse', bubbles: true, isPrimary: true }));
+        const glide = async (id, x0, y0, x1, y1, steps = 14) => { ev('pointerdown', x0, y0, id); ev('pointermove', x0, y0 - 26, id); await wait(30); y0 -= 26; for (let s = 1; s <= steps; s++) { const t = s / steps, e = t * t * (3 - 2 * t); ev('pointermove', x0 + (x1 - x0) * e, y0 + (y1 - y0) * e, id); await wait(22); } ev('pointerup', x1, y1, id); await wait(140); };
+        const trayPos = (id) => { const { G, L, scroll } = Jig._debug(); const idx = G.tray.indexOf(id), col = Math.floor(idx / L.trows), row = idx % L.trows, y0 = L.trayTop + (L.trayH - L.trows * L.slot) / 2; return [12 + col * L.slot + L.slot / 2 - scroll, y0 + row * L.slot + L.slot / 2]; };
+        window.__demoDone = false;
+        const order = (() => { const { G } = Jig._debug(); return G.pieces.map((p) => ({ p, k: p.edge ? 0 : 1, r: Math.abs(p.r - G.rows / 2) + Math.abs(p.c - G.cols / 2) })).sort((a, b) => a.k - b.k || a.p.r - b.p.r || a.p.c - b.p.c).map((o) => o.p.id); })();
+        $('tEdges').click(); await wait(500); $('tEdges').click(); await wait(300);
+        const rank = new Map(order.map((id, k) => [id, k]));
+        for (let guard = 0; guard < 80; guard++) {
+          let { G, L } = Jig._debug(); if (!G.tray.length) break;
+          const id = G.tray.slice().sort((x, y) => rank.get(x) - rank.get(y))[0]; const p = G.pieces[id];
+          const cx = Math.floor(G.tray.indexOf(id) / L.trows); const want = Math.max(0, cx * L.slot - 12);
+          cv.dispatchEvent(new WheelEvent('wheel', { deltaX: want - Jig._debug().scroll, clientX: 100 + R().left, clientY: L.trayTop + 20 + R().top, bubbles: true, cancelable: true }));
+          await wait(60); ({ G, L } = Jig._debug());
+          const [sx, sy] = trayPos(id); const tx = L.bx + p.c * L.pw + L.pw / 2 + 4, ty = L.by + p.r * L.ph + L.ph / 2 - 3;
+          await glide(1, sx, sy, tx, ty, 16);
+          (window.__demoLog = window.__demoLog || []).push([id, p.r, p.c, Math.round(sx), Math.round(sy), Math.round(tx), Math.round(ty), Jig.progress().placed, G.tray.length, Jig._debug().G.tray.indexOf(id)]);
+          if (Jig.progress().placed === 12 && !window.__zoomed) { window.__zoomed = true; Jig.zoomBy(2.2); await wait(900); const v = Jig._debug().view; v.x = -L.w * 0.25; v.y = -L.trayTop * 0.3; Jig.redraw(); await wait(1400); Jig.zoomFit(); await wait(900); }
+        }
+        await wait(5200);
+        window.__demoDone = true;
+      }
+      else if (q === 'play' || q === 'zoom' || q === 'style') {
+        if (q === 'style') { trial.bg = 'oak'; trial.style = 'stained'; applyLook(); }
+        if (q === 'zoom') { trial.bg = 'felt'; applyLook(); }
+        const i = find(q === 'play' ? 'Lavender Field' : q === 'zoom' ? 'Parrots in the Tree' : 'Tulips and Daffodils', 'Photo');
+        begin(i, q === 'zoom' ? 108 : q === 'style' ? 24 : 48, null);
+        let { G, L } = await arrange(q === 'zoom' ? 0.55 : 0.6, q === 'zoom' ? 4 : 3);
+        for (let k = 0; k < 3; k++) {   // if the page re-started the puzzle after we set it up, set it up again
+          await wait(1200);
+          const pr = Jig.progress(); if (pr && pr.placed > 0) break;
+          ({ G, L } = await arrange(q === 'zoom' ? 0.55 : 0.6, q === 'zoom' ? 4 : 3));
+        }
+        if (q === 'zoom') {
+          for (let k = 0; k < 4; k++) {   // the page may re-fit itself once after load: keep the zoom until it sticks
+            Jig.zoomFit(); Jig.zoomBy(2.3); await wait(250);
+            const v = Jig._debug().view; v.x = -L.w * 0.35; v.y = -L.trayTop * 0.55; Jig.redraw(); await wait(1100);
+            if (Jig._debug().view.s > 1.5) break;
+          }
+        }
+      }
+      await wait(1200); document.title = 'READY-' + q;
+    })().catch((e) => { document.body.insertAdjacentHTML('beforeend', '<pre style="position:fixed;left:0;top:0;z-index:99;background:#fff;color:#900;font-size:14px;padding:8px">SCENE ERROR ' + String(e && e.message) + '</pre>'); });
+  })();
+  /*SHOT-END*/
 })();
 </script>
 </body>
