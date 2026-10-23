@@ -1,11 +1,11 @@
 // Connects the game's Shop and Club to RevenueCat inside the phone app. On the web it does nothing.
 // Sets window.PBStore = { owned(), restore(), buy(id), prices() } before the game runs; the game asks it what the player owns at every start.
-// buy/restore/owned give the list of ids the player owns WITHOUT the store prefix (pieceberry_pack_seasons -> pack_seasons);
+// buy/restore/owned give the list of ids the player owns WITHOUT the store prefix (quiltjig_pack_seasons -> pack_seasons);
 // any active Club subscription gives 'club'. The keys below are RevenueCat's PUBLIC app keys (appl_... iPhone, goog_... Android), safe to ship.
 // Needs David's RevenueCat account (one app per game). Until a key is set the game says "store not available" and sells nothing.
 (function () {
   var KEYS = { ios: '', android: '' };
-  var PRE = 'pieceberry_';            // = the final app name, lowercase, plus an underscore (see PRODUCTS.md); change with the name
+  var PRE = 'quiltjig_';            // = the final app name, lowercase, plus an underscore (see PRODUCTS.md); change with the name
   var ENTITLEMENT = 'club';           // the RevenueCat entitlement that both Club subscriptions unlock
   var ONE_TIME = ['pack_seasons', 'pack_harbors', 'pack_pantry', 'pack_villages', 'pack_mosaics', 'pack_friends',
     'bg_felt', 'bg_linen', 'bg_slate', 'bg_oak', 'bg_cabin', 'bg_starry',
